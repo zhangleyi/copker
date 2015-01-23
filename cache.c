@@ -67,8 +67,7 @@ int isCacheWriteBack(void)
 		"movl %%eax,%0\n\t"
 		: "=m" (value_of_cr0)
 		:
-		:"eax");
-		
+		:"eax");	
 	//info("CR0: %x\n",value_of_cr0);	
 	
 	if((value_of_cr0 & Bit_29) == 0 && (value_of_cr0 & Bit_30) == 0)
